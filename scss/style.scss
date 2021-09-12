@@ -1,0 +1,98 @@
+@charset 'utf-8';
+@import 'font';
+@import 'reset';
+
+
+body {background: #000;}
+
+#header {
+    z-index: 2;
+    top: 0; left: 0;
+    width: 100%; height: 3.4375rem; background: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    .inner {
+        padding: 0 1.25rem;
+        &::after{content: ''; display: block; clear: both;}
+        .logo {
+            float: left;
+            a {
+                display: block;
+                font: 700 17px/55px 'KoPub Batang'; color: #fff; text-align: center; letter-spacing: 4px;
+                &:hover {
+                    color: #85774E;
+                }
+            }
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .gnb {
+                > li {
+                    height: 100%; float:left;
+                    &.on, &:hover {
+                        background: #85774E;
+                        ul {
+                            display: block;
+                        }
+                    }
+                    a {
+                        display: block; line-height: 55px; padding: 0 20px; color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+section {
+    padding: 1.25rem;
+    > ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            flex-basis: 100%;
+            &.icon {
+                flex-basis: 33.3333333%;
+            }
+            a {
+                display: block;
+                text-align: center;
+                margin: 0.3125rem;
+                padding: 0.625rem 0.3125rem;
+                text-decoration: none;
+                font-weight: bold;
+                line-height: 1.4;
+                color: white;
+                background: #85774E;
+                &.on, &:hover {
+                    background: #c0ae71;
+                }
+            }
+        }
+      }
+}
+#footer {
+    bottom: 0;
+    width: 100%; padding: 13px 0; background: #000;
+    .inner {
+        width: 1180px; margin: 0 auto;
+        p {
+            font: 13px/1 'arial'; color: #888; letter-spacing: 2px; text-align: center;
+            a {
+                font: 13px/1 'arial'; color: #888; letter-spacing: 1px; text-align: center;
+            }
+        }
+    }
+}
+
+/*
+color: #111;
+color: #85774E;
+color: yellowgreen;
+color: cadetblue;
+color: #eaeaea;
+*/
